@@ -1,0 +1,115 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --golf-green: #1a4c2e;
+  --golf-green-light: #2d5a3d;
+  --golf-green-dark: #0f2318;
+  --gold-accent: #d4af37;
+  --gold-accent-light: #e6c458;
+  --tan-accent: #c19a6b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--golf-green-dark) 0%, var(--golf-green) 50%, var(--golf-green-light) 100%);
+}
+
+.section-gradient {
+  background: linear-gradient(to bottom, rgba(26, 76, 46, 0.05) 0%, rgba(26, 76, 46, 0.1) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  backdrop-filter: blur(10px);
+  background: rgba(26, 76, 46, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(26, 76, 46, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-countUp {
+  animation: countUp 0.8s ease-out;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--golf-green-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent-light);
+}
