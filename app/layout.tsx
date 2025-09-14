@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://golfcoffee.ca'),
   title: "GolfCoffee.ca - The Perfect Pairing | Premium Golf Equipment & Coffee Gear",
   description: "Discover the perfect pairing of premium golf equipment and artisan coffee gear. Fuel for fairways & collectors - where passion meets precision.",
   keywords: "golf equipment, coffee gear, premium golf accessories, artisan coffee, golf coffee mugs, luxury golf gear",
