@@ -8,7 +8,7 @@ const nextConfig = {
   },
   images: { 
     unoptimized: true,
-    domains: ['golfcoffee.ca']
+    domains: ['golfcoffee.vercel.app']
   },
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
